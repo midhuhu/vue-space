@@ -22,11 +22,13 @@ declare namespace PageRoute {
     | 'constant-page'
     | 'login'
     | 'not-found'
-    | 'multi-menu'
-    | 'multi-menu_first'
-    | 'multi-menu_first_second-new'
-    | 'multi-menu_first_second-new_third'
-    | 'multi-menu_first_second';
+    | 'echarts-menu'
+    | 'echarts-menu_line-view'
+    | 'echarts-menu_map-view'
+    | 'echarts-menu_map-view_china'
+    | 'echarts-menu_map-view_guangdong'
+    | 'echarts-menu_map-view_ningxia'
+    | 'echarts-menu_pie-3d';
 
   /**
    * last degree route key, which has the page file
@@ -40,7 +42,10 @@ declare namespace PageRoute {
     | 'constant-page'
     | 'login'
     | 'not-found'
-    | 'multi-menu_first_second-new_third'
-    | 'multi-menu_first_second'
+    | 'echarts-menu_line-view'
+    | 'echarts-menu_map-view_china'
+    | 'echarts-menu_map-view_guangdong'
+    | 'echarts-menu_map-view_ningxia'
+    | 'echarts-menu_pie-3d'
   >;
 }

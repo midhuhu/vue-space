@@ -10,6 +10,9 @@ export const views: Record<
   'constant-page': () => import('./_builtin/constant-page/index.vue'),
   login: () => import('./_builtin/login/index.vue'),
   'not-found': () => import('./_builtin/not-found/index.vue'),
-  'multi-menu_first_second-new_third': () => import('./multi-menu/first/second-new/third/index.vue'),
-  'multi-menu_first_second': () => import('./multi-menu/first/second/index.vue')
+  'echarts-menu_line-view': () => import('./echarts-menu/line-view/index.vue'),
+  'echarts-menu_map-view_china': () => import('./echarts-menu/map-view/china/index.vue'),
+  'echarts-menu_map-view_guangdong': () => import('./echarts-menu/map-view/guangdong/index.vue'),
+  'echarts-menu_map-view_ningxia': () => import('./echarts-menu/map-view/ningxia/index.vue'),
+  'echarts-menu_pie-3d': () => import('./echarts-menu/pie-3d/index.vue')
 };

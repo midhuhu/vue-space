@@ -23,20 +23,20 @@ const datas = reactive([{
     num: 4,
     except_num: 3
 },
-{
-    name: '石嘴山市',
-    longitude: 106.376173,
-    latitude: 39.01333,
-    num: 4,
-    except_num: 1
-},
-{
-    name: '银川市',
-    longitude: 106.278179,
-    latitude: 38.46637,
-    num: 4,
-    except_num: 0
-}
+    {
+        name: '石嘴山市',
+        longitude: 106.376173,
+        latitude: 39.01333,
+        num: 4,
+        except_num: 1
+    },
+    {
+        name: '银川市',
+        longitude: 106.278179,
+        latitude: 38.46637,
+        num: 4,
+        except_num: 0
+    }
 ])
 const options = reactive({
     // backgroundColor: '#fff',
@@ -60,12 +60,12 @@ const options = reactive({
         boxDepth: 'auto',
         // 配置为垂直渐变的背景
         environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0, color: '#00aaff' // 天空颜色
-            }, {
-                offset: 0.7, color: '#998866' // 地面颜色
-            }, {
-                offset: 1, color: '#998866' // 地面颜色
-            }], false),
+            offset: 0, color: '#00aaff' // 天空颜色
+        }, {
+            offset: 0.7, color: '#998866' // 地面颜色
+        }, {
+            offset: 1, color: '#998866' // 地面颜色
+        }], false),
         groundPlane: {
             // 是否显示地面
             show: false,

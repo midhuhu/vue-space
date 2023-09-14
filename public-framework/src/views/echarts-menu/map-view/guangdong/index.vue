@@ -14,7 +14,7 @@ import * as echarts from 'echarts'
  * 地图注册
  */
 void 0; (() => {
-  echarts.registerMap('gd', gd as Parameters<typeof echarts.registerMap>[1])
+    echarts.registerMap('gd', gd as Parameters<typeof echarts.registerMap>[1])
 })()
 const options = reactive({
     geo3D: {
@@ -33,7 +33,7 @@ const options = reactive({
         },
         environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ // 配置为垂直渐变的背景
             offset: 0,
-            color: 'black' // 天空颜色           
+            color: 'black' // 天空颜色
         }, {
             offset: 0.7,
             color: 'black' // 地面颜色
@@ -80,54 +80,54 @@ const options = reactive({
                     opacity: 1
                 },
             },
-            {
-                "name": "惠州市",
-                "value": [
-                    114.42356,
-                    23.113434,
-                    100,
-                ],
-                itemStyle: {
-                    color: '#fffe00',
-                    opacity: 1
+                {
+                    "name": "惠州市",
+                    "value": [
+                        114.42356,
+                        23.113434,
+                        100,
+                    ],
+                    itemStyle: {
+                        color: '#fffe00',
+                        opacity: 1
+                    },
                 },
-            },
-            {
-                "name": "清远市",
-                "value": [
-                    113.057866,
-                    23.690082,
-                    100,
-                ],
-                itemStyle: {
-                    color: '#18d0ff',
-                    opacity: 1
+                {
+                    "name": "清远市",
+                    "value": [
+                        113.057866,
+                        23.690082,
+                        100,
+                    ],
+                    itemStyle: {
+                        color: '#18d0ff',
+                        opacity: 1
+                    },
                 },
-            },
-            {
-                "name": "梅州市",
-                "value": [
-                    116.126091,
-                    24.291806,
-                    100,
-                ],
-                itemStyle: {
-                    color: '#e94971',
-                    opacity: 1
+                {
+                    "name": "梅州市",
+                    "value": [
+                        116.126091,
+                        24.291806,
+                        100,
+                    ],
+                    itemStyle: {
+                        color: '#e94971',
+                        opacity: 1
+                    },
                 },
-            },
-            {
-                "name": "湛江市",
-                "value": [
-                    110.358655,
-                    21.280766,
-                    100,
-                ],
-                itemStyle: {
-                    color: '#634fd4',
-                    opacity: 1
+                {
+                    "name": "湛江市",
+                    "value": [
+                        110.358655,
+                        21.280766,
+                        100,
+                    ],
+                    itemStyle: {
+                        color: '#634fd4',
+                        opacity: 1
+                    },
                 },
-            },
             ],
         }
     ]

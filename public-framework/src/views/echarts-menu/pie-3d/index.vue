@@ -21,10 +21,10 @@ const getParametricEquation = (startRatio: number, endRatio: number, isSelected:
     if (startRatio === 0 && endRatio === 1) {
         isSelected = false;
     }
-    
+
     // 通过扇形内径/外径的值，换算出辅助参数 k（默认值 1/3）
     k = typeof k !== 'undefined' ? k : 1 / 3 ;
-    
+
     // 计算选中效果分别在 x 轴、y 轴方向上的位移（未选中，则位移均为 0）
     const offsetX = isSelected ? Math.cos(midRadian) * 0.1 : 0;
     const offsetY = isSelected ? Math.sin(midRadian) * 0.1 : 0;
@@ -40,13 +40,13 @@ const getParametricEquation = (startRatio: number, endRatio: number, isSelected:
             max: Math.PI * 3,
             step: Math.PI / 32
         },
-        
+
         v: {
             min: 0,
             max: Math.PI * 2,
             step: Math.PI / 20
         },
-        
+
         x: function(u: number, v: number) {
             if (u < startRadian) {
                 return offsetX + Math.cos(startRadian) * (1 + Math.cos(v) * k) * hoverRate;
@@ -56,7 +56,7 @@ const getParametricEquation = (startRatio: number, endRatio: number, isSelected:
             }
             return offsetX + Math.cos(u) * (1 + Math.cos(v) * k) * hoverRate;
         },
-        
+
         y: function(u: number, v: number) {
             if (u < startRadian) {
                 return offsetY + Math.sin(startRadian) * (1 + Math.cos(v) * k) * hoverRate;
@@ -66,7 +66,7 @@ const getParametricEquation = (startRatio: number, endRatio: number, isSelected:
             }
             return offsetY + Math.sin(u) * (1 + Math.cos(v) * k) * hoverRate;
         },
-        
+
         z: function(u: number, v: number) {
             if (u < - Math.PI * 0.5 ) {
                 return Math.sin(u);
@@ -135,7 +135,7 @@ const getPie3D = (pieData: string | any[], internalDiameterRatio: number)=>{
         legendData.push(series[i].name);
     }
 
-    
+
 
     // 准备待返回的配置项，把准备好的 legendData、series 传入。
     const option = {
@@ -176,7 +176,7 @@ const getPie3D = (pieData: string | any[], internalDiameterRatio: number)=>{
                 alpha:25,
                 beta:130,
             },
-            
+
         },
         series: series
     };
@@ -193,14 +193,14 @@ const option = getPie3D([{
     }
 }
 
-, {
-    name: '未消除',
-    value: 1,
-    itemStyle: {
-        opacity: 0.5,
-        color:'rgba(209,126,23,.8)',
+    , {
+        name: '未消除',
+        value: 1,
+        itemStyle: {
+            opacity: 0.5,
+            color:'rgba(209,126,23,.8)',
+        }
     }
-}
 
 ],2);
 

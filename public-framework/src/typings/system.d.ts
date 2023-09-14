@@ -309,78 +309,21 @@ declare namespace I18nType {
       title: string;
     };
     routes: {
-      dashboard: {
+      'echarts-menu': {
         _value: string;
-        analysis: string;
-        workbench: string;
-      };
-      document: {
-        _value: string;
-        vue: string;
-        vite: string;
-        naive: string;
-        project: string;
-        'project-link': string;
-      };
-      component: {
-        _value: string;
-        button: string;
-        card: string;
-        table: string;
-      };
-      plugin: {
-        _value: string;
-        charts: {
+        'line-view': {
           _value: string;
-          antv: string;
-          echarts: string;
         };
-        copy: string;
-        editor: {
+        'map-view': {
           _value: string;
-          markdown: string;
-          quill: string;
+          china: string;
+          guangdong: string;
+          ningxia: string;
         };
-        icon: string;
-        map: string;
-        print: string;
-        swiper: string;
-        video: string;
-      };
-      'auth-demo': {
-        _value: string;
-        permission: string;
-        super: string;
-      };
-      function: {
-        _value: string;
-        tab: string;
-      };
-      exception: {
-        _value: string;
-        403: string;
-        404: string;
-        500: string;
-      };
-      'multi-menu': {
-        _value: string;
-        first: {
+        'pie-3d': {
           _value: string;
-          second: string;
-          'second-new': {
-            _value: string;
-            third: string;
-          };
         };
       };
-      management: {
-        _value: string;
-        auth: string;
-        role: string;
-        route: string;
-        user: string;
-      };
-      about: string;
     };
   }
 }

@@ -7,10 +7,11 @@
     </div>
     <header-menu v-else />
     <div class="flex justify-end h-full">
-      <full-screen />
-      <theme-mode />
-      <setting-button v-if="showButton" />
-      <user-avatar />
+        <full-screen />
+        <theme-mode />
+        <toggle-lang />
+        <setting-button v-if="showButton" />
+        <user-avatar />
     </div>
   </dark-mode-container>
 </template>
