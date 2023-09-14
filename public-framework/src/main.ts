@@ -6,6 +6,11 @@ import { setupRouter } from './router';
 import { setupAssets } from './plugins';
 import { setupStore } from './store';
 import { setupI18n } from './locales';
+import STable from '@surely-vue/table';
+import Antdv from 'ant-design-vue';
+
+import 'ant-design-vue/dist/reset.css';
+import "@surely-vue/table/dist/index.less";
 
 async function setupApp() {
   // import assets: js、css
@@ -30,6 +35,9 @@ async function setupApp() {
   setupI18n(app);
 
   appLoading.unmount();
+
+  app.use(Antdv);
+  app.use(STable);
 
   // mount app
   app.mount('#app');

@@ -28,7 +28,9 @@ declare namespace PageRoute {
     | 'echarts-menu_map-view_china'
     | 'echarts-menu_map-view_guangdong'
     | 'echarts-menu_map-view_ningxia'
-    | 'echarts-menu_pie-3d';
+    | 'echarts-menu_pie-3d'
+    | 'surely-table'
+    | 'surely-table_drag';
 
   /**
    * last degree route key, which has the page file
@@ -47,5 +49,6 @@ declare namespace PageRoute {
     | 'echarts-menu_map-view_guangdong'
     | 'echarts-menu_map-view_ningxia'
     | 'echarts-menu_pie-3d'
+    | 'surely-table_drag'
   >;
 }

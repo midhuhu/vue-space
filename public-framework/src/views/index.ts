@@ -14,5 +14,6 @@ export const views: Record<
   'echarts-menu_map-view_china': () => import('./echarts-menu/map-view/china/index.vue'),
   'echarts-menu_map-view_guangdong': () => import('./echarts-menu/map-view/guangdong/index.vue'),
   'echarts-menu_map-view_ningxia': () => import('./echarts-menu/map-view/ningxia/index.vue'),
-  'echarts-menu_pie-3d': () => import('./echarts-menu/pie-3d/index.vue')
+  'echarts-menu_pie-3d': () => import('./echarts-menu/pie-3d/index.vue'),
+  'surely-table_drag': () => import('./surely-table/drag/index.vue')
 };
