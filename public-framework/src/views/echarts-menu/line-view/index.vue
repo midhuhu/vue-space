@@ -12,9 +12,6 @@
             <div>伪3d柱状图</div>
             <echarts-api :options="options3"></echarts-api>
         </div>
-        <div class="test" :span="2">
-            <echarts-api :options="options4"></echarts-api>
-        </div>
     </div>
 </template>
 
@@ -22,7 +19,6 @@
 import { reactive } from 'vue';
 import EchartsApi from '@/components/Assembly/EchartsAPI.vue';
 import * as echarts from 'echarts';
-import map from '@/assets/json/map.json';
 
 // options1 图表
 const data = reactive([
@@ -371,68 +367,6 @@ const options3 = reactive({
     ],
 });
 
-/**
- * 地图注册
- */
-void 0;
-(() => {
-    echarts.registerMap('zhejiang', map as Parameters<typeof echarts.registerMap>[1]);
-})();
-const options4 = reactive({
-    backgroundColor: '#668edd',
-    title: {
-        text: '鄞州区3D地图',
-        textStyle: {
-            color: '#fff',
-        },
-    },
-    series: [
-        {
-            type: 'map3D',
-            name: '浙江',
-            selectedMode: 'single', //地图高亮单选
-            regionHeight: 3, //地图高度
-            map: 'zhejiang',
-            viewControl: {
-                distance: 100, //地图视角 控制初始大小
-                rotateSensitivity: [1, 1],
-            },
-            label: {
-                show: true, //是否显示市
-                textStyle: {
-                    color: '#fff', //文字颜色
-                    fontSize: 12, //文字大小
-                },
-                formatter: (data: { name: string }) => {
-                    if (data.name.includes('_hidden')) return ' ';
-                    return data.name.replace(/镇$/, '').replace(/街道$/, '');
-                },
-            },
-            itemStyle: {
-                color: 'rgb(23, 34, 127)', //地图颜色
-                borderWidth: 2, //分界线wdith
-                borderColor: 'rgb(54, 117, 242)', //分界线颜色
-            },
-            emphasis: {
-                label: {
-                    show: true, //是否显示高亮
-                    textStyle: {
-                        color: '#fff', //高亮文字颜色
-                    },
-                },
-                itemStyle: {
-                    borderWidth: 2,
-                    borderColor: 'rgb(54, 117, 242)',
-                    color: 'rgb(54, 117, 242)',
-                },
-            },
-            labelLayout: {
-                moveOverlap: true,
-            },
-            data: [],
-        },
-    ],
-});
 </script>
 <style lang="less" scoped>
 .echarts {
