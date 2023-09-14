@@ -1,8 +1,8 @@
 <template>
-  <dark-mode-container class="flex-col-stretch h-full" :inverted="theme.sider.inverted">
-    <global-logo v-if="!isHorizontalMix" :show-title="showTitle" :style="{ height: theme.header.height + 'px' }" />
-    <vertical-menu />
-  </dark-mode-container>
+    <dark-mode-container class="flex-col-stretch h-full" :inverted="theme.sider.inverted">
+        <global-logo v-if="!isHorizontalMix" :show-title="showTitle" :style="{ height: theme.header.height + 'px' }" />
+        <vertical-menu />
+    </dark-mode-container>
 </template>
 
 <script setup lang="ts">

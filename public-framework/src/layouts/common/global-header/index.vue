@@ -1,24 +1,24 @@
 <template>
     <dark-mode-container class="global-header flex-y-center h-full" :inverted="theme.header.inverted">
-        <global-logo v-if="showLogo" :show-title="true" class="h-full" :style="{ width: theme.sider.width + 'px' }"/>
+        <global-logo v-if="showLogo" :show-title="true" class="h-full" :style="{ width: theme.sider.width + 'px' }" />
         <div v-if="!showHeaderMenu" class="flex-1-hidden flex-y-center h-full">
-            <menu-collapse v-if="showMenuCollapse || isMobile"/>
-            <global-breadcrumb v-if="theme.header.crumb.visible && !isMobile"/>
+            <menu-collapse v-if="showMenuCollapse || isMobile" />
+            <global-breadcrumb v-if="theme.header.crumb.visible && !isMobile" />
         </div>
-        <header-menu v-else/>
+        <header-menu v-else />
         <div class="flex justify-end h-full">
-            <full-screen/>
-            <theme-mode/>
-            <toggle-lang/>
-            <setting-button v-if="showButton"/>
-            <user-avatar/>
+            <full-screen />
+            <theme-mode />
+            <toggle-lang />
+            <setting-button v-if="showButton" />
+            <user-avatar />
         </div>
     </dark-mode-container>
 </template>
 
 <script setup lang="ts">
-import {useThemeStore} from '@/store';
-import {useBasicLayout} from '@/composables';
+import { useThemeStore } from '@/store';
+import { useBasicLayout } from '@/composables';
 import GlobalLogo from '../global-logo/index.vue';
 import {
     FullScreen,
@@ -31,7 +31,7 @@ import {
     UserAvatar,
 } from './components';
 
-defineOptions({name: 'GlobalHeader'});
+defineOptions({ name: 'GlobalHeader' });
 
 interface Props {
     /** 显示logo */
@@ -45,7 +45,7 @@ interface Props {
 defineProps<Props>();
 
 const theme = useThemeStore();
-const {isMobile} = useBasicLayout();
+const { isMobile } = useBasicLayout();
 
 const showButton = import.meta.env.PROD && import.meta.env.VITE_VERCEL !== 'Y';
 </script>

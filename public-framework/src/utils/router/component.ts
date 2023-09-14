@@ -6,7 +6,7 @@ import { isFunction } from '../common';
 type Lazy<T> = () => Promise<T>;
 
 interface ModuleComponent {
-  default: RouteComponent;
+    default: RouteComponent;
 }
 
 type LayoutComponent = Record<UnionKey.LayoutComponentType, Lazy<ModuleComponent>>;
@@ -16,11 +16,11 @@ type LayoutComponent = Record<UnionKey.LayoutComponentType, Lazy<ModuleComponent
  * @param layoutType - 布局类型
  */
 export function getLayoutComponent(layoutType: UnionKey.LayoutComponentType) {
-  const layoutComponent: LayoutComponent = {
-    basic: BasicLayout,
-    blank: BlankLayout
-  };
-  return layoutComponent[layoutType];
+    const layoutComponent: LayoutComponent = {
+        basic: BasicLayout,
+        blank: BlankLayout,
+    };
+    return layoutComponent[layoutType];
 }
 
 /**
@@ -28,27 +28,27 @@ export function getLayoutComponent(layoutType: UnionKey.LayoutComponentType) {
  * @param routeKey - 路由key
  */
 export function getViewComponent(routeKey: AuthRoute.LastDegreeRouteKey) {
-  if (!views[routeKey]) {
-    throw new Error(`路由“${routeKey}”没有对应的组件文件！`);
-  }
-  return setViewComponentName(views[routeKey], routeKey);
+    if (!views[routeKey]) {
+        throw new Error(`路由“${routeKey}”没有对应的组件文件！`);
+    }
+    return setViewComponentName(views[routeKey], routeKey);
 }
 
 /** 给页面组件设置名称 */
 function setViewComponentName(component: RouteComponent | Lazy<ModuleComponent>, name: string) {
-  if (isAsyncComponent(component)) {
-    return async () => {
-      const result = await component();
-      Object.assign(result.default, { name });
-      return result;
-    };
-  }
+    if (isAsyncComponent(component)) {
+        return async () => {
+            const result = await component();
+            Object.assign(result.default, { name });
+            return result;
+        };
+    }
 
-  Object.assign(component, { name });
+    Object.assign(component, { name });
 
-  return component;
+    return component;
 }
 
 function isAsyncComponent(component: RouteComponent | Lazy<ModuleComponent>): component is Lazy<ModuleComponent> {
-  return isFunction(component);
+    return isFunction(component);
 }

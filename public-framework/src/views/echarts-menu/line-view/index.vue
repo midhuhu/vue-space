@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-import EchartsApi from '@/components/Assembly/EchartsAPI.vue'
-import * as echarts from 'echarts'
-import map from '@/assets/json/map.json'
+import { reactive } from 'vue';
+import EchartsApi from '@/components/Assembly/EchartsAPI.vue';
+import * as echarts from 'echarts';
+import map from '@/assets/json/map.json';
 
 // options1 图表
 const data = reactive([
@@ -30,28 +30,28 @@ const data = reactive([
     { value: 888, name: 'Direct' },
     { value: 580, name: 'Email' },
     { value: 484, name: 'Union Ads' },
-    { value: 300, name: 'Video Ads' }
-])
+    { value: 300, name: 'Video Ads' },
+]);
 
 setTimeout(() => {
-    data.push({ value: 100, name: 'Other' })
+    data.push({ value: 100, name: 'Other' });
 }, 3000);
 setTimeout(() => {
-    data[3].value = 2000
+    data[3].value = 2000;
 }, 5000);
 
 const options = reactive({
     title: {
         text: 'Referer of a Website',
         subtext: 'Fake Data',
-        left: 'center'
+        left: 'center',
     },
     tooltip: {
-        trigger: 'item'
+        trigger: 'item',
     },
     legend: {
         orient: 'vertical',
-        left: 'right'
+        left: 'right',
     },
     series: [
         {
@@ -63,12 +63,12 @@ const options = reactive({
                 itemStyle: {
                     shadowBlur: 10,
                     shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-})
+                    shadowColor: 'rgba(0, 0, 0, 0.5)',
+                },
+            },
+        },
+    ],
+});
 
 // options2 图表
 let base = +new Date(1968, 9, 3);
@@ -85,40 +85,40 @@ const options2 = reactive({
         trigger: 'axis',
         position: function (pt: unknown[]) {
             return [pt[0], '10%'];
-        }
+        },
     },
     title: {
         left: 'center',
-        text: 'Large Area Chart'
+        text: 'Large Area Chart',
     },
     toolbox: {
         feature: {
             dataZoom: {
-                yAxisIndex: 'none'
+                yAxisIndex: 'none',
             },
             restore: {},
-            saveAsImage: {}
-        }
+            saveAsImage: {},
+        },
     },
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: date
+        data: date,
     },
     yAxis: {
         type: 'value',
-        boundaryGap: [0, '100%']
+        boundaryGap: [0, '100%'],
     },
     dataZoom: [
         {
             type: 'inside',
             start: 0,
-            end: 10
+            end: 10,
         },
         {
             start: 0,
-            end: 10
-        }
+            end: 10,
+        },
     ],
     series: [
         {
@@ -127,24 +127,24 @@ const options2 = reactive({
             symbol: 'none',
             sampling: 'lttb',
             itemStyle: {
-                color: 'rgb(255, 70, 131)'
+                color: 'rgb(255, 70, 131)',
             },
             areaStyle: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                     {
                         offset: 0,
-                        color: 'rgb(255, 158, 68)'
+                        color: 'rgb(255, 158, 68)',
                     },
                     {
                         offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }
-                ])
+                        color: 'rgb(255, 70, 131)',
+                    },
+                ]),
             },
-            data: data2
-        }
-    ]
-})
+            data: data2,
+        },
+    ],
+});
 
 /**
  * options3 图表
@@ -209,7 +209,7 @@ const options3 = reactive({
         axisPointer: {
             type: 'shadow',
         },
-        formatter: function (params: { name: string, value: string }[]) {
+        formatter: function (params: { name: string; value: string }[]) {
             const item = params[1];
             return item.name + ' : ' + item.value;
         },
@@ -263,7 +263,13 @@ const options3 = reactive({
     series: [
         {
             type: 'custom',
-            renderItem: (params: any, api: { coord: (arg0: any[]) => any; value: (arg0: number) => any; }) => {
+            renderItem: (
+                params: any,
+                api: {
+                    coord: (arg0: any[]) => any;
+                    value: (arg0: number) => any;
+                },
+            ) => {
                 const location = api.coord([api.value(0), api.value(1)]);
                 return {
                     type: 'group',
@@ -348,7 +354,7 @@ const options3 = reactive({
                 normal: {
                     show: true,
                     position: 'top',
-                    formatter: (e: { value: string; }) => {
+                    formatter: (e: { value: string }) => {
                         return e.value + '次';
                     },
                     fontSize: 16,
@@ -363,22 +369,22 @@ const options3 = reactive({
             data: VALUE,
         },
     ],
-})
-
+});
 
 /**
  * 地图注册
  */
-void 0; (() => {
-    echarts.registerMap('zhejiang', map as Parameters<typeof echarts.registerMap>[1])
-})()
+void 0;
+(() => {
+    echarts.registerMap('zhejiang', map as Parameters<typeof echarts.registerMap>[1]);
+})();
 const options4 = reactive({
     backgroundColor: '#668edd',
     title: {
         text: '鄞州区3D地图',
         textStyle: {
-            color: '#fff'
-        }
+            color: '#fff',
+        },
     },
     series: [
         {
@@ -398,14 +404,14 @@ const options4 = reactive({
                     fontSize: 12, //文字大小
                 },
                 formatter: (data: { name: string }) => {
-                    if (data.name.includes('_hidden')) return ' '
-                    return data.name.replace(/镇$/, '').replace(/街道$/, '')
+                    if (data.name.includes('_hidden')) return ' ';
+                    return data.name.replace(/镇$/, '').replace(/街道$/, '');
                 },
             },
             itemStyle: {
-                color: 'rgb(23, 34, 127)',    //地图颜色
-                borderWidth: 2,   //分界线wdith
-                borderColor: 'rgb(54, 117, 242)'  //分界线颜色
+                color: 'rgb(23, 34, 127)', //地图颜色
+                borderWidth: 2, //分界线wdith
+                borderColor: 'rgb(54, 117, 242)', //分界线颜色
             },
             emphasis: {
                 label: {
@@ -417,16 +423,16 @@ const options4 = reactive({
                 itemStyle: {
                     borderWidth: 2,
                     borderColor: 'rgb(54, 117, 242)',
-                    color: 'rgb(54, 117, 242)'
-                }
+                    color: 'rgb(54, 117, 242)',
+                },
             },
-            labelLayout:{
-                moveOverlap: true
+            labelLayout: {
+                moveOverlap: true,
             },
             data: [],
         },
     ],
-})
+});
 </script>
 <style lang="less" scoped>
 .echarts {
@@ -448,6 +454,6 @@ const options4 = reactive({
     .test:nth-child(4) {
         grid-row: 2 / 4;
     }
-    color:#668edd
+    color: #668edd;
 }
 </style>

@@ -10,37 +10,37 @@ import STable from '@surely-vue/table';
 import Antdv from 'ant-design-vue';
 
 import 'ant-design-vue/dist/reset.css';
-import "@surely-vue/table/dist/index.less";
+import '@surely-vue/table/dist/index.less';
 
 async function setupApp() {
-  // import assets: js、css
-  setupAssets();
+    // import assets: js、css
+    setupAssets();
 
-  // app loading
-  const appLoading = createApp(AppLoading);
+    // app loading
+    const appLoading = createApp(AppLoading);
 
-  appLoading.mount('#appLoading');
+    appLoading.mount('#appLoading');
 
-  const app = createApp(App);
+    const app = createApp(App);
 
-  // store plugin: pinia
-  setupStore(app);
+    // store plugin: pinia
+    setupStore(app);
 
-  // vue custom directives
-  setupDirectives(app);
+    // vue custom directives
+    setupDirectives(app);
 
-  // vue router
-  await setupRouter(app);
+    // vue router
+    await setupRouter(app);
 
-  setupI18n(app);
+    setupI18n(app);
 
-  appLoading.unmount();
+    appLoading.unmount();
 
-  app.use(Antdv);
-  app.use(STable);
+    app.use(Antdv);
+    app.use(STable);
 
-  // mount app
-  app.mount('#app');
+    // mount app
+    app.mount('#app');
 }
 
 setupApp();

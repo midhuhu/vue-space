@@ -11,21 +11,21 @@ import mock from './mock';
  * @param viteEnv - 环境变量配置
  */
 export function setupVitePlugins(viteEnv: ImportMetaEnv): (PluginOption | PluginOption[])[] {
-  const plugins = [
-    vue({
-      script: {
-        defineModel: true
-      }
-    }),
-    vueJsx(),
-    ...unplugin(viteEnv),
-    unocss(),
-    mock(viteEnv)
-  ];
+    const plugins = [
+        vue({
+            script: {
+                defineModel: true,
+            },
+        }),
+        vueJsx(),
+        ...unplugin(viteEnv),
+        unocss(),
+        mock(viteEnv),
+    ];
 
-  if (viteEnv.VITE_SOYBEAN_ROUTE_PLUGIN === 'Y') {
-    plugins.push(pageRoute());
-  }
+    if (viteEnv.VITE_SOYBEAN_ROUTE_PLUGIN === 'Y') {
+        plugins.push(pageRoute());
+    }
 
-  return plugins;
+    return plugins;
 }

@@ -1,7 +1,7 @@
 <template>
-  <hover-container class="w-64px h-full" tooltip-content="重新加载" placement="bottom-end" @click="handleRefresh">
-    <icon-mdi-refresh class="text-22px" :class="{ 'animate-spin': loading }" />
-  </hover-container>
+    <hover-container class="w-64px h-full" tooltip-content="重新加载" placement="bottom-end" @click="handleRefresh">
+        <icon-mdi-refresh class="text-22px" :class="{ 'animate-spin': loading }" />
+    </hover-container>
 </template>
 
 <script setup lang="ts">
@@ -16,18 +16,18 @@ const route = useRoute();
 const { loading, startLoading, endLoading } = useLoading();
 
 function handleRefresh() {
-  const isCached = routeStore.cacheRoutes.includes(String(route.name));
-  if (isCached) {
-    routeStore.removeCacheRoute(route.name as AuthRoute.AllRouteKey);
-  }
-  startLoading();
-  app.reloadPage();
-  setTimeout(() => {
+    const isCached = routeStore.cacheRoutes.includes(String(route.name));
     if (isCached) {
-      routeStore.addCacheRoute(route.name as AuthRoute.AllRouteKey);
+        routeStore.removeCacheRoute(route.name as AuthRoute.AllRouteKey);
     }
-    endLoading();
-  }, 1000);
+    startLoading();
+    app.reloadPage();
+    setTimeout(() => {
+        if (isCached) {
+            routeStore.addCacheRoute(route.name as AuthRoute.AllRouteKey);
+        }
+        endLoading();
+    }, 1000);
 }
 </script>
 

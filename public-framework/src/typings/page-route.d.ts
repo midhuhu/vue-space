@@ -29,6 +29,8 @@ declare namespace PageRoute {
     | 'echarts-menu_map-view_guangdong'
     | 'echarts-menu_map-view_ningxia'
     | 'echarts-menu_pie-3d'
+    | 'naive-ui'
+    | 'naive-ui_test'
     | 'surely-table'
     | 'surely-table_drag';
 
@@ -49,6 +51,7 @@ declare namespace PageRoute {
     | 'echarts-menu_map-view_guangdong'
     | 'echarts-menu_map-view_ningxia'
     | 'echarts-menu_pie-3d'
+    | 'naive-ui_test'
     | 'surely-table_drag'
   >;
 }

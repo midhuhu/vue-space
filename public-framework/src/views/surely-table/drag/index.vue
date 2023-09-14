@@ -1,10 +1,5 @@
 <template>
-    <s-table
-        :columns="columns"
-        :data-source="data"
-        :pagination="false"
-        :scroll="{ y: 500, x: 2000 }"
-    >
+    <s-table :columns="columns" :data-source="data" :pagination="false" :scroll="{ y: 500, x: 2000 }">
         <template #bodyCell="{ column }">
             <template v-if="column.key === 'operation'">
                 <a>Action</a>
@@ -13,8 +8,8 @@
     </s-table>
 </template>
 <script setup lang="ts">
-import {ref} from 'vue';
-import {STable} from "@surely-vue/table";
+import { ref } from 'vue';
+import { STable } from '@surely-vue/table';
 
 interface DataItem {
     key: number;
@@ -64,7 +59,7 @@ const columns = ref<Record<string, any>[]>([
         key: 'address4',
         dataIndex: 'address',
     },
-    {title: 'Column 5', dataIndex: 'address', key: 'address5'},
+    { title: 'Column 5', dataIndex: 'address', key: 'address5' },
     {
         title: 'Action',
         key: 'operation',
@@ -85,9 +80,6 @@ const init = () => {
             address: `London Park no. ${i}`,
         });
     }
-}
-init()
-
-
+};
+init();
 </script>
-

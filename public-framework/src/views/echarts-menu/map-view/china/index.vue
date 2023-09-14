@@ -5,19 +5,19 @@
 </template>
 
 <script lang="ts" setup>
-import EchartsApi from '@/components/Assembly/EchartsAPI.vue'
+import EchartsApi from '@/components/Assembly/EchartsAPI.vue';
 
-import {reactive} from 'vue'
-import china from '@/assets/json/china.json'
-import * as echarts from 'echarts'
+import { reactive } from 'vue';
+import china from '@/assets/json/china.json';
+import * as echarts from 'echarts';
 
 /**
  * 地图注册
  */
 void 0;
 (() => {
-    echarts.registerMap('china', china as Parameters<typeof echarts.registerMap>[1])
-})()
+    echarts.registerMap('china', china as Parameters<typeof echarts.registerMap>[1]);
+})();
 const outname = [
     '南海诸岛',
     '北京',
@@ -56,41 +56,8 @@ const outname = [
     '澳门',
 ];
 const outvalue = [
-    0,
-    524,
-    13,
-    140,
-    75,
-    13,
-    83,
-    11,
-    19,
-    15,
-    69,
-    260,
-    39,
-    4,
-    31,
-    104,
-    36,
-    1052,
-    33,
-    347,
-    9,
-    157,
-    22,
-    4,
-    18,
-    5,
-    2398,
-    41,
-    0,
-    484,
-    404,
-    22,
-    3,
-    5,
-    225,
+    0, 524, 13, 140, 75, 13, 83, 11, 19, 15, 69, 260, 39, 4, 31, 104, 36, 1052, 33, 347, 9, 157, 22, 4, 18, 5, 2398, 41,
+    0, 484, 404, 22, 3, 5, 225,
 ];
 const outdata = [];
 const unit = '万元';
@@ -119,9 +86,7 @@ const options = reactive({
         textStyle: {
             color: 'red',
         },
-        formatter: function (params: {
-            name: string | number;
-        }) {
+        formatter: function (params: { name: string | number }) {
             return `
               <ul class="map-tooltip">
                 <li class="title">
@@ -132,20 +97,20 @@ const options = reactive({
                 <li>
                   <p class="name">科研费:</p>
                   <p class="color" style="color:#048AFC">${
-                (datas[params.name] && datas[params.name].research) || 0
-            }${unit}</p>
+                      (datas[params.name] && datas[params.name].research) || 0
+                  }${unit}</p>
                 </li>
                 <li>
                   <p class="name">订购费:</p>
                   <p class="color" style="color:#F98519">${
-                (datas[params.name] && datas[params.name].order) || 0
-            }${unit}</p>
+                      (datas[params.name] && datas[params.name].order) || 0
+                  }${unit}</p>
                 </li>
                 <li>
                   <p class="name">维修费:</p>
                   <p class="color" style="color:#04BFFC">${
-                (datas[params.name] && datas[params.name].repair) || 0
-            }${unit}</p>
+                      (datas[params.name] && datas[params.name].repair) || 0
+                  }${unit}</p>
                 </li>
               </ul>
             `;
@@ -274,8 +239,7 @@ const options = reactive({
             data: outdata,
         },
     ],
-})
-
+});
 </script>
 
 <style lang="less" scoped>
