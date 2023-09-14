@@ -302,7 +302,7 @@ declare namespace App {
 }
 
 declare namespace I18nType {
-  type langType = 'en' | 'zh-CN' | 'km-KH';
+  type langType = 'en' | 'zh-CN';
 
   interface Schema {
     system: {

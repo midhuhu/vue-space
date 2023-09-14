@@ -34,7 +34,7 @@
     </template>
   </admin-layout>
   <n-back-top :key="theme.scrollMode" :listen-to="`#${app.scrollElId}`" class="z-100" />
-  <setting-drawer v-if="false" />
+  <setting-drawer />
 </template>
 
 <script setup lang="ts">
