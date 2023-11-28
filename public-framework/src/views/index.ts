@@ -15,6 +15,7 @@ export const views: Record<
   'echarts-menu_map-view_guangdong': () => import('./echarts-menu/map-view/guangdong/index.vue'),
   'echarts-menu_map-view_ningxia': () => import('./echarts-menu/map-view/ningxia/index.vue'),
   'echarts-menu_pie-3d': () => import('./echarts-menu/pie-3d/index.vue'),
+  'mid-utils': () => import('./mid-utils/index.vue'),
   'naive-ui_test': () => import('./naive-ui/test/index.vue'),
   'surely-table_drag': () => import('./surely-table/drag/index.vue')
 };
