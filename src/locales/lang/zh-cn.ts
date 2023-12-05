@@ -21,6 +21,27 @@ const locale: LocaleMessages<I18nType.Schema> = {
                     _value: '3d圆柱',
                 },
             },
+            'surely-table': {
+                _value: '表格',
+                'drag': {
+                    _value: '行拖拽',
+                },
+            },
+            'naive-ui': {
+                _value: 'NaiveUI',
+                'test': {
+                    _value: '测试1',
+                },
+            },
+            'mid-utils': {
+                _value: '自用工具库',
+            },
+            'old-project': {
+                _value: '旧项目',
+                'word-cloud': {
+                    _value: '动态词云图',
+                },
+            },
         },
     },
 };

@@ -20,6 +20,28 @@ const locale: LocaleMessages<I18nType.Schema> = {
                 'pie-3d': {
                     _value: '3d pie',
                 },
+
+            },
+            'surely-table': {
+                _value: 'SurelyTable',
+                'drag': {
+                    _value: 'Row drag and drop',
+                },
+            },
+            'naive-ui': {
+                _value: 'NaiveUi',
+                'test': {
+                    _value: 'test',
+                },
+            },
+            'mid-utils': {
+                _value: 'mid-utils',
+            },
+            'old-project': {
+                _value: 'old-project',
+                'word-cloud': {
+                    _value: 'Dynamic Word Cloud',
+                },
             },
         },
     },

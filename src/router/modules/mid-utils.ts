@@ -4,7 +4,8 @@ const midUtils: AuthRoute.Route = {
     component: "self",
     meta: {
         title: "mid-utils效验",
-        singleLayout: "basic"
+        singleLayout: "basic",
+        i18nTitle: "message.routes.mid-utils._value",
     }
 };
 

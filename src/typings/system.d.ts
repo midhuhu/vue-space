@@ -325,7 +325,28 @@ declare namespace I18nType {
                 'pie-3d': {
                     _value: string;
                 };
-            };
+            },
+            'surely-table': {
+                _value: string;
+                'drag': {
+                    _value: string;
+                },
+            },
+            'naive-ui': {
+                _value: string;
+                'test': {
+                    _value: string;
+                },
+            },
+            'mid-utils': {
+                _value: string;
+            },
+            'old-project': {
+                _value: string;
+                'word-cloud': {
+                    _value: string;
+                }
+            },
         };
     }
 }
