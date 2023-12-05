@@ -39,7 +39,17 @@ export default defineConfig((configEnv) => {
             proxy: createViteProxy(isOpenProxy, envConfig),
         },
         optimizeDeps: {
-            include: ['@better-scroll/core'],
+            include: [
+                '@antv/data-set',
+                '@antv/g2',
+                '@better-scroll/core',
+                'echarts',
+                'swiper',
+                'swiper/vue',
+                'vditor',
+                'wangeditor',
+                'xgplayer'
+            ],
         },
         build: {
             reportCompressedSize: false,

@@ -5,10 +5,10 @@ const oldProject: AuthRoute.Route = {
     meta: { title: '旧项目', i18nTitle: 'message.routes.old-project._value' },
     children: [
         {
-            name: 'old-project_word-cloud',
-            path: '/old-project/word-cloud',
+            name: 'old-project_wordCloud',
+            path: '/old-project/wordCloud',
             component: 'self',
-            meta: { title: '动态词云图', i18nTitle: 'message.routes.old-project.word-cloud._value' },
+            meta: { title: 'old-project_wordCloud', i18nTitle: 'message.routes.old-project.wordCloud' },
         },
     ],
 };

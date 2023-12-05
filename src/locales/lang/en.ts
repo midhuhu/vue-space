@@ -17,31 +17,43 @@ const locale: LocaleMessages<I18nType.Schema> = {
                     guangdong: 'guangdong map',
                     ningxia: 'ningxia map',
                 },
-                'pie-3d': {
+                pie3d: {
                     _value: '3d pie',
                 },
-
             },
             'surely-table': {
                 _value: 'SurelyTable',
-                'drag': {
-                    _value: 'Row drag and drop',
-                },
+                drag: 'Row drag and drop',
             },
-            'naive-ui': {
+            naiveUI: {
                 _value: 'NaiveUi',
-                'test': {
-                    _value: 'test',
-                },
+                test: 'test',
             },
             'mid-utils': {
                 _value: 'mid-utils',
             },
             'old-project': {
                 _value: 'old-project',
-                'word-cloud': {
-                    _value: 'Dynamic Word Cloud',
+                wordCloud: 'Dynamic Word Cloud',
+            },
+            plugin: {
+                _value: 'Plugin',
+                charts: {
+                    _value: 'Chart',
+                    echarts: 'ECharts',
+                    antv: 'AntV',
                 },
+                copy: 'Copy',
+                editor: {
+                    _value: 'Editor',
+                    quill: 'Quill',
+                    markdown: 'Markdown',
+                },
+                icon: 'Icon',
+                map: 'Map',
+                print: 'Print',
+                swiper: 'Swiper',
+                video: 'Video',
             },
         },
     },

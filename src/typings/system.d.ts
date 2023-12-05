@@ -322,31 +322,44 @@ declare namespace I18nType {
                     guangdong: string;
                     ningxia: string;
                 };
-                'pie-3d': {
+                pie3d: {
                     _value: string;
                 };
-            },
+            };
             'surely-table': {
                 _value: string;
-                'drag': {
-                    _value: string;
-                },
-            },
-            'naive-ui': {
+                drag: string;
+            };
+            naiveUI: {
                 _value: string;
-                'test': {
-                    _value: string;
-                },
-            },
+                test: string;
+            };
             'mid-utils': {
                 _value: string;
-            },
+            };
             'old-project': {
                 _value: string;
-                'word-cloud': {
+                wordCloud: string;
+            };
+            plugin: {
+                _value: string;
+                charts: {
                     _value: string;
-                }
-            },
+                    antv: string;
+                    echarts: string;
+                };
+                copy: string;
+                editor: {
+                    _value: string;
+                    markdown: string;
+                    quill: string;
+                };
+                icon: string;
+                map: string;
+                print: string;
+                swiper: string;
+                video: string;
+            };
         };
     }
 }

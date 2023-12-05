@@ -17,30 +17,43 @@ const locale: LocaleMessages<I18nType.Schema> = {
                     guangdong: '广东地图',
                     ningxia: '宁夏地图',
                 },
-                'pie-3d': {
+                pie3d: {
                     _value: '3d圆柱',
                 },
             },
             'surely-table': {
                 _value: '表格',
-                'drag': {
-                    _value: '行拖拽',
-                },
+                drag: '行拖拽',
             },
-            'naive-ui': {
+            naiveUI: {
                 _value: 'NaiveUI',
-                'test': {
-                    _value: '测试1',
-                },
+                test: '测试1',
             },
             'mid-utils': {
                 _value: '自用工具库',
             },
             'old-project': {
                 _value: '旧项目',
-                'word-cloud': {
-                    _value: '动态词云图',
+                wordCloud: '动态词云图',
+            },
+            plugin: {
+                _value: '插件示例',
+                charts: {
+                    _value: '图表',
+                    echarts: 'ECharts',
+                    antv: 'AntV',
                 },
+                copy: '剪贴板',
+                editor: {
+                    _value: '编辑器',
+                    quill: '富文本',
+                    markdown: 'Markdown',
+                },
+                icon: '图标',
+                map: '地图',
+                print: '打印',
+                swiper: 'Swiper',
+                video: '视频',
             },
         },
     },
