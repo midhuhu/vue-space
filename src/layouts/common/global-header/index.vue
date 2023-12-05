@@ -7,9 +7,11 @@
         </div>
         <header-menu v-else />
         <div class="flex justify-end h-full">
+            <global-search />
             <full-screen />
             <theme-mode />
             <toggle-lang />
+            <system-message />
             <setting-button v-if="showButton" />
             <user-avatar />
         </div>
@@ -19,6 +21,7 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/store';
 import { useBasicLayout } from '@/composables';
+import GlobalSearch from '../global-search/index.vue';
 import GlobalLogo from '../global-logo/index.vue';
 import {
     FullScreen,
@@ -26,6 +29,7 @@ import {
     HeaderMenu,
     MenuCollapse,
     SettingButton,
+    SystemMessage,
     ThemeMode,
     ToggleLang,
     UserAvatar,
