@@ -39,7 +39,7 @@ const bindAttrs = computed<{ class: string; style: string }>(() => ({
 const symbolId = computed(() => {
     const { VITE_ICON_LOCAL_PREFFIX: preffix } = import.meta.env;
 
-    const defaultLocalIcon = 'no-icon';
+    const defaultLocalIcon = 'bill';
 
     const icon = props.localIcon || defaultLocalIcon;
 
