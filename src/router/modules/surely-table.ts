@@ -10,7 +10,7 @@ const surelyTable: AuthRoute.Route = {
             meta: { title: '行拖拽' },
         },
     ],
-    meta: { title: 'SurelyTable' },
+    meta: { title: 'SurelyTable表格' },
 };
 
 export default surelyTable;
