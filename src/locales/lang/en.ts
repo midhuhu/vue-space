@@ -55,6 +55,9 @@ const locale: LocaleMessages<I18nType.Schema> = {
                 swiper: 'Swiper',
                 video: 'Video',
             },
+            webRtc: {
+                _value: 'webRTC'
+            }
         },
     },
 };

@@ -48,7 +48,8 @@ declare namespace PageRoute {
     | 'plugin_swiper'
     | 'plugin_video'
     | 'surely-table'
-    | 'surely-table_drag';
+    | 'surely-table_drag'
+    | 'webRtc';
 
   /**
    * last degree route key, which has the page file
@@ -81,5 +82,6 @@ declare namespace PageRoute {
     | 'plugin_swiper'
     | 'plugin_video'
     | 'surely-table_drag'
+    | 'webRtc'
   >;
 }

@@ -360,6 +360,9 @@ declare namespace I18nType {
                 swiper: string;
                 video: string;
             };
+            webRtc: {
+                _value: string
+            }
         };
     }
 }
