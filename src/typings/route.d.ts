@@ -64,6 +64,8 @@ declare namespace AuthRoute {
         multi?: boolean;
         /** 是否固定在tab卡不可关闭  */
         affix?: boolean;
+        /** 是否全屏 */
+        isFullPage?: boolean;
     }
 
     type Route<K extends AllRouteKey = AllRouteKey> = K extends AllRouteKey

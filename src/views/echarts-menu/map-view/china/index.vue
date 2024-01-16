@@ -61,7 +61,7 @@ const outvalue = [
 ];
 const outdata = [];
 const unit = '万元';
-const datas = {
+const datas: any = {
     黑龙江: {
         research: 1000,
         order: 2400,

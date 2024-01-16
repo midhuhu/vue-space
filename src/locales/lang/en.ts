@@ -56,8 +56,12 @@ const locale: LocaleMessages<I18nType.Schema> = {
                 video: 'Video',
             },
             webRtc: {
-                _value: 'webRTC'
-            }
+                _value: 'webRTC',
+            },
+            'web-gl': {
+                _value: 'web-gl',
+                '3d-map': '3d地图',
+            },
         },
     },
 };

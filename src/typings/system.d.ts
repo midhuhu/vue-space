@@ -361,8 +361,12 @@ declare namespace I18nType {
                 video: string;
             };
             webRtc: {
-                _value: string
-            }
+                _value: string;
+            };
+            'web-gl': {
+                _value: string;
+                '3d-map': string;
+            };
         };
     }
 }
